@@ -1,0 +1,2 @@
+nano /etc/apt/sources.list
+deb http://cz.archive.ubuntu.com/ubuntu bionic main universe

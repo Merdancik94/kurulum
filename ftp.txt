@@ -1,0 +1,6 @@
+apt update && apt install vsftpd -y && sudo adduser mer
+sudo service sshd restart
+sudo usermod -d /root mer
+sudo chmod -R a+rwx /root   izin
+chmod a-w /home/testuser
+systemctl restart vsftpd
