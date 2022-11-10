@@ -1,8 +1,5 @@
 #!/bin/bash
 echo "deb http://cz.archive.ubuntu.com/ubuntu bionic main universe" >> /etc/apt/sources.list && apt update
-apt-get update && apt-get build-dep openvpn -y
-wget --no-check-cert https://raw.githubusercontent.com/Merdancik94/kurulum-xor/main/openvpn_2.4.8-bionic0_amd64.deb
-dpkg -i openvpn_2.4.8-bionic0_amd64.deb
 apt install vsftpd -y && sudo adduser mer && sudo service sshd restart && sudo usermod -d /root mer && sudo chmod -R a+rwx /root
 distro_check(){
 	ID=$(grep -oP '(?<=^ID=).+' /etc/os-release | tr -d '"')
